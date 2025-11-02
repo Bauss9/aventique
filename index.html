@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Marktplatz - Finden Sie Ihr nächstes Fahrzeug</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="aventique.png">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#fahrzeug">Fahrzeug</a></li>
+                    <li><a href="#vorteile">Warum wir</a></li>
+                    <li><a href="#anlaesse">Anlässe</a></li>
+                    <li><a href="#preise">Preise</a></li>
+                </ul>
+                <button class="sign-up-btn" id="booking-btn">Jetzt buchen</button>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Mieten Sie Premium<br>Luxus für Ihr Event</h1>
+                <p class="hero-subtitle">Porsche Panamera - Eleganz trifft Performance</p>
+
+                <div class="search-form">
+                    <input type="date" class="form-input" id="pickup-date" placeholder="Abholdatum">
+
+                    <input type="date" class="form-input" id="return-date" placeholder="Rückgabedatum">
+
+                    <select class="form-select" id="occasion">
+                        <option>Anlass auswählen</option>
+                        <option>Hochzeit</option>
+                        <option>Business Event</option>
+                        <option>Geburtstag</option>
+                        <option>Firmenfeier</option>
+                        <option>Besonderer Anlass</option>
+                    </select>
+
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" stroke="white" stroke-width="2"/>
+                            <path d="M10 6V10L13 13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Verfügbarkeit prüfen
+                    </button>
+                </div>
+
+                <div class="featured-badge">
+                    <div class="badge-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="badge-text">
+                        <strong>Sofortige Bestätigung</strong>
+                        <p>Buchen Sie jetzt - Fahren Sie heute</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Car - Porsche Panamera -->
+    <section class="featured-car" id="fahrzeug">
+        <div class="container">
+            <div class="featured-car-content">
+                <div class="featured-car-image">
+                    <img src="/pokda.png" alt="Porsche Panamera">
+                    <div class="price-badge">
+                        <span class="price-label">Ab</span>
+                        <span class="price-amount">€299</span>
+                        <span class="price-period">/Tag</span>
+                    </div>
+                </div>
+                <div class="featured-car-details">
+                    <span class="car-badge">Verfügbar jetzt</span>
+                    <h2>Porsche Panamera</h2>
+                    <p class="car-tagline">Luxus, Performance und Komfort in Perfektion vereint</p>
+
+                    <div class="car-specs">
+                        <div class="spec-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>460 PS</span>
+                        </div>
+                        <div class="spec-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                                <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>0-100 in 4.2s</span>
+                        </div>
+                        <div class="spec-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>4 Passagiere</span>
+                        </div>
+                        <div class="spec-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="8" width="18" height="12" rx="2" stroke="#1A1A1A" stroke-width="2"/>
+                                <path d="M7 8V6C7 4.89543 7.89543 4 9 4H15C16.1046 4 17 4.89543 17 6V8" stroke="#1A1A1A" stroke-width="2"/>
+                            </svg>
+                            <span>Automatik</span>
+                        </div>
+                    </div>
+
+                    <div class="features-list">
+                        <div class="feature-tag">✓ Vollkasko</div>
+                        <div class="feature-tag">✓ Chauffeur verfügbar</div>
+                        <div class="feature-tag">✓ Premium Sound</div>
+                        <div class="feature-tag">✓ Leder Interieur</div>
+                    </div>
+
+                    <button class="cta-button">Jetzt buchen</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose" id="vorteile">
+        <div class="container">
+            <h2 class="section-title">Warum uns wählen?</h2>
+            <p class="section-subtitle">Premium Service für unvergessliche Momente</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+                            <path d="M16 24L22 30L34 18" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Sofortige Bestätigung</h3>
+                    <p>Buchen Sie online und erhalten Sie sofort eine Bestätigung. Keine Wartezeiten.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+                            <path d="M24 14V24L30 27" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Flexible Zeiten</h3>
+                    <p>Mieten Sie stundenweise, täglich oder wöchentlich - ganz nach Ihrem Bedarf.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+                            <path d="M24 16C19.5817 16 16 19.5817 16 24C16 28.4183 19.5817 32 24 32C28.4183 32 32 28.4183 32 24C32 19.5817 28.4183 16 24 16Z" stroke="#1A1A1A" stroke-width="2.5"/>
+                            <path d="M24 20V24L27 26" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Vollversichert</h3>
+                    <p>Fahren Sie sorgenfrei mit unserer Vollkaskoversicherung ohne Selbstbeteiligung.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#F5F5F5"/>
+                            <path d="M24 14C18.4772 14 14 18.4772 14 24C14 29.5228 18.4772 34 24 34C29.5228 34 34 29.5228 34 24" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M24 18L24 24L28 24" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Premium Erlebnis</h3>
+                    <p>Vom Check-in bis zur Rückgabe - genießen Sie erstklassigen Service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For -->
+    <section class="perfect-for" id="anlaesse">
+        <div class="container">
+            <h2 class="section-title">Perfekt für jeden Anlass</h2>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop" alt="Hochzeit">
+                    <div class="occasion-overlay">
+                        <h3>Hochzeiten</h3>
+                        <p>Ihr großer Tag verdient ein großartiges Auto</p>
+                    </div>
+                </div>
+                <div class="occasion-card">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop" alt="Business">
+                    <div class="occasion-overlay">
+                        <h3>Business Events</h3>
+                        <p>Beeindrucken Sie Ihre Geschäftspartner</p>
+                    </div>
+                </div>
+                <div class="occasion-card">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop" alt="Geburtstag">
+                    <div class="occasion-overlay">
+                        <h3>Geburtstage</h3>
+                        <p>Feiern Sie stilvoll Ihren besonderen Tag</p>
+                    </div>
+                </div>
+                <div class="occasion-card">
+                    <img src="https://images.unsplash.com/photo-1464047736614-af63643285bf?w=400&h=300&fit=crop" alt="Weekend">
+                    <div class="occasion-overlay">
+                        <h3>Wochenendtrips</h3>
+                        <p>Erleben Sie Luxus auf Ihrer Reise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Was unsere Kunden sagen</h2>
+            <p class="section-subtitle">Erfahrungen die begeistern</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Absolut fantastisches Erlebnis! Der Porsche war in makellosem Zustand und hat unsere Hochzeit unvergesslich gemacht. Der Service war erstklassig!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=12" alt="Michael Schmidt" class="author-avatar">
+                        <div>
+                            <h4>Michael Schmidt</h4>
+                            <p>Hochzeit in München</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Perfekt für unsere Firmenveranstaltung. Professionell, pünktlich und das Auto war ein echter Hingucker. Werden definitiv wieder buchen!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=27" alt="Sarah Weber" class="author-avatar">
+                        <div>
+                            <h4>Sarah Weber</h4>
+                            <p>Business Event Frankfurt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Zum 50. Geburtstag habe ich mir diesen Traum erfüllt. Die Buchung war super einfach und der Chauffeur-Service war ausgezeichnet. Danke!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/60?img=33" alt="Thomas Müller" class="author-avatar">
+                        <div>
+                            <h4>Thomas Müller</h4>
+                            <p>Geburtstagsfeier Berlin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="preise">
+        <div class="container">
+            <h2 class="section-title">Transparente Preise</h2>
+            <p class="section-subtitle">Keine versteckten Kosten - Alles inklusive</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Tagesmiete</h3>
+                    <div class="pricing-amount">
+                        <span class="currency">€</span>
+                        <span class="amount">299</span>
+                        <span class="period">/Tag</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 300 km inklusive</li>
+                        <li>✓ Vollkaskoversicherung</li>
+                        <li>✓ 24/7 Support</li>
+                        <li>✓ Freie Fahrt</li>
+                    </ul>
+                    <button class="pricing-btn">Buchen</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Beliebteste</div>
+                    <h3>Wochenende</h3>
+                    <div class="pricing-amount">
+                        <span class="currency">€</span>
+                        <span class="amount">549</span>
+                        <span class="period">/2 Tage</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 600 km inklusive</li>
+                        <li>✓ Vollkaskoversicherung</li>
+                        <li>✓ 24/7 Premium Support</li>
+                        <li>✓ Freie Fahrt</li>
+                        <li>✓ Tanken inklusive</li>
+                    </ul>
+                    <button class="pricing-btn primary">Jetzt buchen</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Mit Chauffeur</h3>
+                    <div class="pricing-amount">
+                        <span class="currency">€</span>
+                        <span class="amount">499</span>
+                        <span class="period">/Tag</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Professioneller Fahrer</li>
+                        <li>✓ Unbegrenzte KM</li>
+                        <li>✓ Vollkaskoversicherung</li>
+                        <li>✓ VIP Service</li>
+                        <li>✓ Champagner</li>
+                    </ul>
+                    <button class="pricing-btn">Anfragen</button>
+                </div>
+            </div>
+
+            <p class="pricing-note">* Alle Preise verstehen sich inklusive MwSt. Zusätzliche Kilometer: €1,50/km</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#fahrzeug">Fahrzeug</a></li>
+                        <li><a href="#vorteile">Warum wir</a></li>
+                        <li><a href="#anlaesse">Anlässe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#preise">Preise</a></li>
+                        <li><a href="#" id="footer-booking-btn">Buchung</a></li>
+                        <li><a href="#fahrzeug">Porsche Panamera</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="mailto:info@aventique.com">info@aventique.com</a></li>
+                        <li><a href="tel:+49123456789">+49 123 456 789</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="#datenschutz">Datenschutz</a></li>
+                        <li><a href="#agb">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a>
+                    <a href="#datenschutz">Datenschutz</a>
+                    <span>© 2025 Aventique. Alle Rechte vorbehalten</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Dialog -->
+    <div id="booking-dialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <button class="dialog-close">&times;</button>
+            <h2>Porsche Panamera buchen</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="booking-name">Name *</label>
+                    <input type="text" id="booking-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="booking-email">E-Mail *</label>
+                    <input type="email" id="booking-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="booking-age">Alter *</label>
+                    <input type="number" id="booking-age" name="age" min="21" max="99" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="booking-from">Von *</label>
+                        <input type="date" id="booking-from" name="from" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-to">Bis *</label>
+                        <input type="date" id="booking-to" name="to" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="booking-message">Nachricht (optional)</label>
+                    <textarea id="booking-message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="dialog-submit-btn">Buchung anfragen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
