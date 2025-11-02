@@ -322,17 +322,19 @@ window.addEventListener('load', () => {
     });
 });
 
-// Prevent form submission on Enter key
-searchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
+// Prevent form submission on Enter key (guarded)
+if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+}
 
 // Add keyboard navigation for cards
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft' && currentPage > 1) {
-        prevBtn.click();
+        if (prevBtn) prevBtn.click();
     } else if (e.key === 'ArrowRight' && currentPage < totalPages) {
-        nextBtn.click();
+        if (nextBtn) nextBtn.click();
     }
 });
 
