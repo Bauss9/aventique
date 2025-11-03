@@ -843,8 +843,9 @@ body {
         padding: 14px;
         border-right: none;
         border-bottom: 1px solid #E5E5E5;
-        background: white;
+        background: white !important;
         border-radius: 6px;
+        color: var(--text-dark) !important;
     }
 
     .form-input:last-of-type,
@@ -855,7 +856,18 @@ body {
     .form-input:hover,
     .form-select:hover {
         transform: none;
-        background: white;
+        background: white !important;
+    }
+
+    .form-input[type="date"]::-webkit-datetime-edit-text,
+    .form-input[type="date"]::-webkit-datetime-edit-month-field,
+    .form-input[type="date"]::-webkit-datetime-edit-day-field,
+    .form-input[type="date"]::-webkit-datetime-edit-year-field {
+        color: var(--text-dark);
+    }
+
+    .form-input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5);
     }
 
     .search-btn {
@@ -1279,6 +1291,36 @@ body {
 
 .form-input:focus {
     background: rgba(212, 175, 55, 0.05);
+}
+
+/* Fix for iOS date inputs appearing white */
+.form-input[type="date"] {
+    position: relative;
+    color: var(--text-dark);
+}
+
+.form-input[type="date"]::-webkit-datetime-edit {
+    color: var(--text-dark);
+}
+
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.form-input[type="date"]:invalid {
+    color: var(--text-gray);
+}
+
+.form-input[type="date"]::before {
+    content: attr(placeholder);
+    color: var(--text-gray);
+    position: absolute;
+}
+
+.form-input[type="date"]:focus::before,
+.form-input[type="date"]:valid::before {
+    content: '';
 }
 
 /* Featured Car Section */
@@ -1712,8 +1754,9 @@ body {
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
     animation: pulse 2s ease-in-out infinite;
-    position: relative;
     overflow: hidden;
+    white-space: nowrap;
+    max-width: 90%;
 }
 
 .popular-badge::before {
@@ -2010,6 +2053,18 @@ body {
     .form-row {
         grid-template-columns: 1fr;
     }
+
+    .popular-badge {
+        padding: 6px 16px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        top: -10px;
+        max-width: 85%;
+    }
+
+    .pricing-card {
+        overflow: hidden;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2052,5 +2107,22 @@ body {
 
     .pricing-card:hover {
         transform: translateY(-4px);
+    }
+
+    .popular-badge {
+        padding: 5px 12px;
+        font-size: 9px;
+        letter-spacing: 0.3px;
+        top: -8px;
+        max-width: 80%;
+    }
+
+    .pricing-grid {
+        gap: 24px;
+    }
+
+    .pricing-card {
+        margin: 0 auto;
+        max-width: 100%;
     }
 }
