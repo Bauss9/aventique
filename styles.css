@@ -1312,11 +1312,13 @@ body {
     position: relative;
     color: var(--text-dark);
     text-align: left;
+    min-height: 45px;
 }
 
 .form-input[type="date"]::-webkit-datetime-edit {
     color: var(--text-dark);
     text-align: left;
+    opacity: 1;
 }
 
 .form-input[type="date"]::-webkit-datetime-edit-fields-wrapper {
@@ -1325,28 +1327,39 @@ body {
 
 .form-input[type="date"]::-webkit-datetime-edit-text {
     color: var(--text-dark);
+    padding: 0 2px;
 }
 
 .form-input[type="date"]::-webkit-datetime-edit-month-field,
 .form-input[type="date"]::-webkit-datetime-edit-day-field,
 .form-input[type="date"]::-webkit-datetime-edit-year-field {
     color: var(--text-dark);
+    padding: 0 2px;
 }
 
 .form-input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 1;
     cursor: pointer;
     filter: invert(0.5);
+    margin-left: 8px;
 }
 
-.form-input[type="date"]:not(:focus)::-webkit-datetime-edit {
-    color: transparent;
+/* Show placeholder text when empty */
+.form-input[type="date"]:not(:focus):not(:valid)::-webkit-datetime-edit {
+    color: var(--text-gray) !important;
+    font-weight: 400;
 }
 
 .form-input[type="date"]::before {
     content: attr(placeholder);
     color: var(--text-gray);
     width: 100%;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-weight: 400;
 }
 
 .form-input[type="date"]:focus::before,
