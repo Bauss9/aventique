@@ -439,10 +439,437 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Update all CTA buttons to open booking dialog
-    document.querySelectorAll('.cta-button, .pricing-btn').forEach(btn => {
-        btn.addEventListener('click', openBookingDialog);
-        console.log('CTA button listener attached');
+    document.querySelectorAll('.cta-button, .pricing-btn, .fleet-btn, .route-btn').forEach(btn => {
+        if (!btn.disabled) {
+            btn.addEventListener('click', openBookingDialog);
+            console.log('CTA button listener attached');
+        }
     });
 });
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const faqItem = question.closest('.faq-item');
+        const isActive = faqItem.classList.contains('active');
+
+        // Close all other FAQ items in the same category
+        const category = faqItem.closest('.faq-category');
+        category.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Toggle current item
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+// ==========================================
+// PRICE CALCULATOR FUNCTIONALITY
+// ==========================================
+
+const calculatorState = {
+    currentStep: 1,
+    selectedVehicle: null,
+    vehiclePrice: 0,
+    vehicleName: '',
+    vehicleSpecs: '',
+    vehicleImage: '',
+    rentalDays: 1,
+    totalKm: 300,
+    basePrice: 0,
+    discount: 0,
+    discountPercentage: 0,
+    extraKmCost: 0,
+    totalPrice: 0
+};
+
+// Vehicle data
+const vehicleData = {
+    'audi-a7': {
+        name: 'Audi A7 Sportback',
+        specs: '340 PS • 5 Sitze • Quattro',
+        image: '/pokda.png',
+        price: 200
+    },
+    'cayenne': {
+        name: 'Porsche Cayenne Coupé',
+        specs: '353 PS • 5 Sitze • SUV',
+        image: '/porsche-cayenne/1.jpeg',
+        price: 300
+    },
+    'panamera': {
+        name: 'Porsche Panamera',
+        specs: '460 PS • 4 Sitze • Luxus',
+        image: '/pokda.png',
+        price: 400
+    }
+};
+
+// Calculate discount based on days
+function getDiscount(days) {
+    if (days >= 30) return 25;
+    if (days >= 14) return 20;
+    if (days >= 7) return 15;
+    if (days >= 3) return 10;
+    return 0;
+}
+
+// Calculate extra KM cost
+function calculateExtraKm(totalKm, days) {
+    const includedKm = days * 300;
+    const extraKm = Math.max(0, totalKm - includedKm);
+    return extraKm * 0.80;
+}
+
+// Update calculator prices
+function updateCalculatorPrices() {
+    const { vehiclePrice, rentalDays, totalKm } = calculatorState;
+
+    // Base price
+    const basePrice = vehiclePrice * rentalDays;
+
+    // Discount
+    const discountPercentage = getDiscount(rentalDays);
+    const discount = (basePrice * discountPercentage) / 100;
+
+    // Extra KM
+    const extraKmCost = calculateExtraKm(totalKm, rentalDays);
+
+    // Total
+    const totalPrice = basePrice - discount + extraKmCost;
+
+    calculatorState.basePrice = basePrice;
+    calculatorState.discount = discount;
+    calculatorState.discountPercentage = discountPercentage;
+    calculatorState.extraKmCost = extraKmCost;
+    calculatorState.totalPrice = totalPrice;
+
+    updatePriceSummary();
+}
+
+// Update price summary display
+function updatePriceSummary() {
+    const { basePrice, discount, discountPercentage, extraKmCost, totalPrice, rentalDays, vehiclePrice, totalKm } = calculatorState;
+
+    // Base price
+    document.getElementById('rental-base-calculation').textContent = `€${vehiclePrice} × ${rentalDays} Tage`;
+    document.getElementById('rental-base-price').textContent = `€${basePrice.toFixed(2)}`;
+
+    // Discount
+    const discountRow = document.getElementById('discount-row');
+    if (discount > 0) {
+        discountRow.style.display = 'flex';
+        document.getElementById('discount-percentage').textContent = discountPercentage;
+        document.getElementById('discount-amount').textContent = `-€${discount.toFixed(2)}`;
+    } else {
+        discountRow.style.display = 'none';
+    }
+
+    // Included KM
+    const includedKm = rentalDays * 300;
+    document.getElementById('km-base-calculation').textContent = `${includedKm} km (${rentalDays} × 300 km/Tag)`;
+
+    // Extra KM
+    const extraKmRow = document.getElementById('extra-km-row');
+    const extraKm = Math.max(0, totalKm - includedKm);
+    if (extraKm > 0) {
+        extraKmRow.style.display = 'flex';
+        document.getElementById('extra-km-calculation').textContent = `${extraKm} km × €0,80`;
+        document.getElementById('extra-km-price').textContent = `€${extraKmCost.toFixed(2)}`;
+    } else {
+        extraKmRow.style.display = 'none';
+    }
+
+    // Total
+    document.getElementById('total-price').textContent = `€${totalPrice.toFixed(2)}`;
+    document.getElementById('price-per-day').textContent = `€${(totalPrice / rentalDays).toFixed(2)}`;
+}
+
+// Step navigation
+function goToStep(step) {
+    if (step < 1 || step > 4) return;
+
+    calculatorState.currentStep = step;
+
+    // Update step indicator
+    document.querySelectorAll('.step').forEach((stepEl, index) => {
+        stepEl.classList.remove('active', 'completed');
+        if (index + 1 === step) {
+            stepEl.classList.add('active');
+        } else if (index + 1 < step) {
+            stepEl.classList.add('completed');
+        }
+    });
+
+    // Update content
+    document.querySelectorAll('.calculator-step-content').forEach((content, index) => {
+        content.classList.remove('active');
+        if (index + 1 === step) {
+            content.classList.add('active');
+        }
+    });
+
+    // Update navigation buttons
+    const prevBtn = document.getElementById('calc-prev');
+    const nextBtn = document.getElementById('calc-next');
+
+    prevBtn.disabled = step === 1;
+
+    if (step === 4) {
+        nextBtn.style.display = 'none';
+    } else {
+        nextBtn.style.display = 'flex';
+    }
+
+    // Update price summary when on step 4
+    if (step === 4) {
+        updatePriceSummary();
+
+        // Update vehicle display
+        if (calculatorState.selectedVehicle) {
+            document.getElementById('summary-vehicle-image').src = calculatorState.vehicleImage;
+            document.getElementById('summary-vehicle-name').textContent = calculatorState.vehicleName;
+            document.getElementById('summary-vehicle-specs').textContent = calculatorState.vehicleSpecs;
+        }
+    }
+}
+
+// Vehicle selection
+document.querySelectorAll('.vehicle-card').forEach(card => {
+    card.addEventListener('click', function() {
+        // Prevent selection if disabled
+        if (this.classList.contains('disabled')) {
+            alert('Dieses Fahrzeug ist aktuell gebucht und nicht verfügbar.');
+            return;
+        }
+
+        const vehicleType = this.dataset.vehicle;
+        const vehiclePrice = parseInt(this.dataset.price);
+        const vehicle = vehicleData[vehicleType];
+
+        // Remove selection from all cards
+        document.querySelectorAll('.vehicle-card').forEach(c => c.classList.remove('selected'));
+
+        // Add selection to clicked card
+        this.classList.add('selected');
+
+        // Update state
+        calculatorState.selectedVehicle = vehicleType;
+        calculatorState.vehiclePrice = vehiclePrice;
+        calculatorState.vehicleName = vehicle.name;
+        calculatorState.vehicleSpecs = vehicle.specs;
+        calculatorState.vehicleImage = vehicle.image;
+
+        updateCalculatorPrices();
+    });
+});
+
+// Days input handlers
+const rentalDaysInput = document.getElementById('rental-days');
+const daysMinus = document.getElementById('days-minus');
+const daysPlus = document.getElementById('days-plus');
+
+if (daysMinus) {
+    daysMinus.addEventListener('click', () => {
+        const currentValue = parseInt(rentalDaysInput.value);
+        if (currentValue > 1) {
+            rentalDaysInput.value = currentValue - 1;
+            calculatorState.rentalDays = currentValue - 1;
+            updateCalculatorPrices();
+            updateDurationPresets();
+        }
+    });
+}
+
+if (daysPlus) {
+    daysPlus.addEventListener('click', () => {
+        const currentValue = parseInt(rentalDaysInput.value);
+        if (currentValue < 90) {
+            rentalDaysInput.value = currentValue + 1;
+            calculatorState.rentalDays = currentValue + 1;
+            updateCalculatorPrices();
+            updateDurationPresets();
+        }
+    });
+}
+
+if (rentalDaysInput) {
+    rentalDaysInput.addEventListener('input', () => {
+        const value = parseInt(rentalDaysInput.value) || 1;
+        calculatorState.rentalDays = Math.max(1, Math.min(90, value));
+        rentalDaysInput.value = calculatorState.rentalDays;
+        updateCalculatorPrices();
+        updateDurationPresets();
+    });
+}
+
+// Duration presets
+function updateDurationPresets() {
+    document.querySelectorAll('.duration-preset').forEach(preset => {
+        preset.classList.remove('selected');
+        if (parseInt(preset.dataset.days) === calculatorState.rentalDays) {
+            preset.classList.add('selected');
+        }
+    });
+}
+
+document.querySelectorAll('.duration-preset').forEach(preset => {
+    preset.addEventListener('click', function() {
+        const days = parseInt(this.dataset.days);
+        rentalDaysInput.value = days;
+        calculatorState.rentalDays = days;
+        updateCalculatorPrices();
+        updateDurationPresets();
+    });
+});
+
+// KM input handlers
+const totalKmInput = document.getElementById('total-km');
+const kmMinus = document.getElementById('km-minus');
+const kmPlus = document.getElementById('km-plus');
+
+if (kmMinus) {
+    kmMinus.addEventListener('click', () => {
+        const currentValue = parseInt(totalKmInput.value);
+        if (currentValue >= 50) {
+            totalKmInput.value = currentValue - 50;
+            calculatorState.totalKm = currentValue - 50;
+            updateCalculatorPrices();
+            updateRoutePresets();
+        }
+    });
+}
+
+if (kmPlus) {
+    kmPlus.addEventListener('click', () => {
+        const currentValue = parseInt(totalKmInput.value);
+        if (currentValue < 10000) {
+            totalKmInput.value = currentValue + 50;
+            calculatorState.totalKm = currentValue + 50;
+            updateCalculatorPrices();
+            updateRoutePresets();
+        }
+    });
+}
+
+if (totalKmInput) {
+    totalKmInput.addEventListener('input', () => {
+        const value = parseInt(totalKmInput.value) || 0;
+        calculatorState.totalKm = Math.max(0, Math.min(10000, value));
+        totalKmInput.value = calculatorState.totalKm;
+        updateCalculatorPrices();
+        updateRoutePresets();
+    });
+}
+
+// Route presets
+function updateRoutePresets() {
+    document.querySelectorAll('.route-preset-btn').forEach(preset => {
+        preset.classList.remove('selected');
+        if (parseInt(preset.dataset.km) === calculatorState.totalKm) {
+            preset.classList.add('selected');
+        }
+    });
+}
+
+document.querySelectorAll('.route-preset-btn').forEach(preset => {
+    preset.addEventListener('click', function() {
+        const km = parseInt(this.dataset.km);
+        totalKmInput.value = km;
+        calculatorState.totalKm = km;
+        updateCalculatorPrices();
+        updateRoutePresets();
+    });
+});
+
+// Navigation buttons
+document.getElementById('calc-prev')?.addEventListener('click', () => {
+    goToStep(calculatorState.currentStep - 1);
+});
+
+document.getElementById('calc-next')?.addEventListener('click', () => {
+    // Validation
+    if (calculatorState.currentStep === 1 && !calculatorState.selectedVehicle) {
+        alert('Bitte wählen Sie ein Fahrzeug aus.');
+        return;
+    }
+
+    goToStep(calculatorState.currentStep + 1);
+});
+
+// Submit button
+document.getElementById('calculator-submit')?.addEventListener('click', function() {
+    const { vehicleName, rentalDays, totalKm, totalPrice } = calculatorState;
+
+    const message = `
+Fahrzeug: ${vehicleName}
+Mietdauer: ${rentalDays} Tage
+Kilometer: ${totalKm} km
+Gesamtpreis: €${totalPrice.toFixed(2)}
+
+Möchten Sie eine Anfrage für diese Konfiguration senden?
+    `.trim();
+
+    if (confirm(message)) {
+        // Open booking dialog with pre-filled data
+        const bookingDialog = document.getElementById('booking-dialog');
+        if (bookingDialog) {
+            const messageField = document.getElementById('booking-message');
+            if (messageField) {
+                messageField.value = `Anfrage über Preiskalkulator:\n\nFahrzeug: ${vehicleName}\nMietdauer: ${rentalDays} Tage\nKilometer: ${totalKm} km\nGesamtpreis: €${totalPrice.toFixed(2)}`;
+            }
+            bookingDialog.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+});
+
+// Initialize calculator
+function initCalculator() {
+    calculatorState.rentalDays = 1;
+    calculatorState.totalKm = 300;
+    goToStep(1);
+}
+
+// Initialize on load
+if (document.getElementById('calc-next')) {
+    initCalculator();
+}
+
+// ==========================================
+// CONTACT FORM FUNCTIONALITY
+// ==========================================
+
+const quickContactForm = document.getElementById('quick-contact-form');
+
+if (quickContactForm) {
+    quickContactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = {
+            name: document.getElementById('contact-name').value,
+            email: document.getElementById('contact-email').value,
+            phone: document.getElementById('contact-phone').value,
+            vehicle: document.getElementById('contact-vehicle').value,
+            message: document.getElementById('contact-message').value
+        };
+
+        console.log('Contact form submitted:', formData);
+
+        // Show success message
+        alert('Vielen Dank für Ihre Anfrage!\n\nWir haben Ihre Nachricht erhalten und werden uns innerhalb von 24 Stunden bei Ihnen melden.\n\n' +
+              'Name: ' + formData.name + '\n' +
+              'E-Mail: ' + formData.email + '\n' +
+              'Telefon: ' + formData.phone +
+              (formData.vehicle ? '\nFahrzeug: ' + formData.vehicle : ''));
+
+        // Reset form
+        quickContactForm.reset();
+    });
+}
 
 console.log('Car Marketplace Website Loaded Successfully!');

@@ -4,27 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Aventique – Luxusauto mieten | Porsche Panamera, Sportwagen & Premiumfahrzeuge</title>
-    
-    <meta name="description" content="Mieten Sie Ihren Traumwagen bei Aventique – Ihrem exklusiven Auto Marktplatz für Luxusfahrzeuge. Entdecken Sie den Porsche Panamera und viele weitere Premiumautos zu unschlagbaren Konditionen. Jetzt Ihr nächstes Fahrzeug finden und stilvoll durchstarten!">
-    <meta name="keywords" content="Auto mieten, Luxusauto, Porsche Panamera, Sportwagen, Auto Marktplatz, Aventique, Premium Fahrzeuge, Mietwagen, Autovermietung, Luxuswagen Deutschland, Porsche mieten, BMW mieten, Audi mieten, Auto leihen, Fahrzeug mieten">
-    
+    <title>Luxusauto mieten Frankfurt | Porsche, Audi & Premium Sportwagen | Aventique</title>
+
+    <meta name="description" content="Mieten Sie Luxusautos in Frankfurt: Porsche Panamera, Cayenne Coupé, Audi A7 & mehr. Perfekt für Frankfurt nach Berlin, Stuttgart, Hamburg. Premium-Autovermietung mit Vollkasko ✓ Chauffeur ✓ Sofortige Buchung">
+    <meta name="keywords" content="Luxusauto mieten Frankfurt, Porsche mieten Frankfurt, Audi mieten Frankfurt, Sportwagen mieten, Frankfurt nach Berlin Auto, Frankfurt nach Stuttgart, Frankfurt nach Hamburg, Premium Mietwagen, Autovermietung Frankfurt, Luxuswagen, Chauffeur Service Frankfurt, Hochzeitsauto Frankfurt, Business Car Rental, Aventique">
+
     <meta name="author" content="Aventique">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="DE-HE">
+    <meta name="geo.placename" content="Frankfurt am Main">
+    <meta name="geo.position" content="50.110924;8.682127">
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Aventique – Luxusauto mieten | Porsche Panamera & mehr">
-    <meta property="og:description" content="Finden Sie Ihr nächstes Luxusfahrzeug bei Aventique. Jetzt Porsche Panamera mieten – stilvoll, exklusiv und einfach online.">
+    <meta property="og:title" content="Luxusauto mieten Frankfurt | Porsche, Audi & Premium Sportwagen">
+    <meta property="og:description" content="Premium Autovermietung in Frankfurt: Porsche Panamera, Cayenne, Audi A7. Ideal für Langstrecken nach Berlin, Stuttgart, Hamburg. Jetzt buchen!">
     <meta property="og:image" content="https://aventique-one.vercel.app/pokda.png">
     <meta property="og:url" content="https://aventique-one.vercel.app/">
-    <meta property="og:site_name" content="Aventique – Auto Marktplatz">
+    <meta property="og:site_name" content="Aventique – Luxusauto Vermietung Frankfurt">
+    <meta property="og:locale" content="de_DE">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aventique – Luxusauto mieten | Porsche Panamera & Premiumautos">
-    <meta name="twitter:description" content="Mieten Sie Luxusfahrzeuge wie den Porsche Panamera bei Aventique – dem exklusiven Auto Marktplatz Deutschlands.">
+    <meta name="twitter:title" content="Luxusauto mieten Frankfurt | Porsche, Audi & Premium Sportwagen">
+    <meta name="twitter:description" content="Mieten Sie Premium-Fahrzeuge in Frankfurt: Porsche, Audi & mehr. Perfekt für Business, Hochzeiten & Langstreckenfahrten.">
     <meta name="twitter:image" content="https://aventique-one.vercel.app/pokda.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CarRental",
+      "name": "Aventique Luxusauto Vermietung",
+      "image": "https://aventique-one.vercel.app/pokda.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Frankfurt",
+        "addressLocality": "Frankfurt am Main",
+        "addressRegion": "Hessen",
+        "postalCode": "60311",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.110924,
+        "longitude": 8.682127
+      },
+      "url": "https://aventique-one.vercel.app",
+      "telephone": "+49-123-456789",
+      "priceRange": "€€€",
+      "description": "Premium Luxusauto-Vermietung in Frankfurt. Porsche, Audi und weitere Luxusfahrzeuge für besondere Anlässe."
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="https://aventique-one.vercel.app/pokda.png" type="image/png">
@@ -46,10 +77,11 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#fahrzeug">Fahrzeug</a></li>
-                    <li><a href="#vorteile">Warum wir</a></li>
-                    <li><a href="#anlaesse">Anlässe</a></li>
-                    <li><a href="#preise">Preise</a></li>
+                    <li><a href="#fahrzeuge">Fahrzeuge</a></li>
+                    <li><a href="#strecken">Strecken</a></li>
+                    <li><a href="#preiskalkulator">Preiskalkulator</a></li>
+                    <li><a href="#vorteile">Vorteile</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
                 <button class="sign-up-btn" id="booking-btn">Jetzt buchen</button>
                 <button class="mobile-menu-btn">
@@ -65,21 +97,20 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Mieten Sie Premium<br>Luxus für Ihr Event</h1>
-                <p class="hero-subtitle">Porsche Panamera - Eleganz trifft Performance</p>
+                <h1 class="hero-title">Luxusauto mieten<br>in Frankfurt</h1>
+                <p class="hero-subtitle">Porsche, Audi & Premium-Sportwagen für jeden Anlass</p>
 
                 <div class="search-form">
                     <input type="date" class="form-input" id="pickup-date" placeholder="Abholdatum">
 
                     <input type="date" class="form-input" id="return-date" placeholder="Rückgabedatum">
 
-                    <select class="form-select" id="occasion">
-                        <option>Anlass auswählen</option>
-                        <option>Hochzeit</option>
-                        <option>Business Event</option>
-                        <option>Geburtstag</option>
-                        <option>Firmenfeier</option>
-                        <option>Besonderer Anlass</option>
+                    <select class="form-select" id="vehicle-type">
+                        <option>Fahrzeug wählen</option>
+                        <option>Porsche Panamera</option>
+                        <option>Porsche Cayenne Coupé</option>
+                        <option>Audi A7</option>
+                        <option>Alle anzeigen</option>
                     </select>
 
                     <button class="search-btn">
@@ -91,143 +122,312 @@
                     </button>
                 </div>
 
-                <div class="featured-badge">
-                    <div class="badge-icon">
+                <div class="hero-highlights">
+                    <div class="highlight-item">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M9 11L12 14L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
+                        <span>Sofortige Bestätigung</span>
                     </div>
-                    <div class="badge-text">
-                        <strong>Sofortige Bestätigung</strong>
-                        <p>Buchen Sie jetzt - Fahren Sie heute</p>
+                    <div class="highlight-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Vollkasko inklusive</span>
+                    </div>
+                    <div class="highlight-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="white" stroke-width="2"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="white" stroke-width="2"/>
+                        </svg>
+                        <span>Chauffeur verfügbar</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Car - Porsche Panamera -->
-    <section class="featured-car" id="fahrzeug">
+    <!-- Fleet Section -->
+    <section class="fleet-section" id="fahrzeuge">
         <div class="container">
-            <div class="featured-car-content">
-                <div class="featured-car-image">
-                    <img src="/pokda.png" alt="Porsche Panamera">
-                    <div class="price-badge">
-                        <span class="price-label">Ab</span>
-                        <span class="price-amount">€499</span>
-                        <span class="price-period">/Tag</span>
+            <h2 class="section-title">Unsere Premium-Flotte</h2>
+            <p class="section-subtitle">Luxusautos für jeden Anspruch – von Sportwagen bis SUV</p>
+
+            <!-- Porsche Panamera -->
+            <div class="fleet-car">
+                <div class="fleet-car-content">
+                    <div class="fleet-car-image">
+                        <img src="/pokda.png" alt="Porsche Panamera mieten Frankfurt">
+                        <div class="price-badge">
+                            <span class="price-label">Ab</span>
+                            <span class="price-amount">€499</span>
+                            <span class="price-period">/Tag</span>
+                        </div>
+                    </div>
+                    <div class="fleet-car-details">
+                        <span class="car-badge">Beliebt</span>
+                        <h3>Porsche Panamera</h3>
+                        <p class="car-tagline">Luxuslimousine mit beeindruckender Performance</p>
+
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>460 PS</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>0-100 in 4.2s</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#1A1A1A" stroke-width="2"/>
+                                </svg>
+                                <span>4 Sitze</span>
+                            </div>
+                        </div>
+
+                        <div class="features-compact">
+                            <span>✓ Vollkasko</span>
+                            <span>✓ Premium Sound</span>
+                            <span>✓ Leder Interieur</span>
+                        </div>
+
+                        <button class="fleet-btn">Details & Buchen</button>
                     </div>
                 </div>
-                <div class="featured-car-details">
-                    <span class="car-badge">Verfügbar jetzt</span>
-                    <h2>Porsche Panamera</h2>
-                    <p class="car-tagline">Luxus, Performance und Komfort in Perfektion vereint</p>
+            </div>
 
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>460 PS</span>
-                        </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
-                                <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <span>0-100 in 4.2s</span>
-                        </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>4 Passagiere</span>
-                        </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="8" width="18" height="12" rx="2" stroke="#1A1A1A" stroke-width="2"/>
-                                <path d="M7 8V6C7 4.89543 7.89543 4 9 4H15C16.1046 4 17 4.89543 17 6V8" stroke="#1A1A1A" stroke-width="2"/>
-                            </svg>
-                            <span>Automatik</span>
+            <!-- Porsche Cayenne Coupé -->
+            <div class="fleet-car">
+                <div class="fleet-car-content reverse">
+                    <div class="fleet-car-image">
+                        <img src="/porsche-cayenne/1.jpeg" alt="Porsche Cayenne Coupé mieten Frankfurt">
+                        <div class="price-badge">
+                            <span class="price-label">Ab</span>
+                            <span class="price-amount">€449</span>
+                            <span class="price-period">/Tag</span>
                         </div>
                     </div>
+                    <div class="fleet-car-details">
+                        <span class="car-badge">SUV Coupé</span>
+                        <h3>Porsche Cayenne Coupé</h3>
+                        <p class="car-tagline">Sportliche Eleganz trifft auf SUV-Komfort</p>
 
-                    <div class="features-list">
-                        <div class="feature-tag">✓ Vollkasko</div>
-                        <div class="feature-tag">✓ Chauffeur verfügbar</div>
-                        <div class="feature-tag">✓ Premium Sound</div>
-                        <div class="feature-tag">✓ Leder Interieur</div>
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>353 PS</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>0-100 in 5.9s</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#1A1A1A" stroke-width="2"/>
+                                </svg>
+                                <span>5 Sitze</span>
+                            </div>
+                        </div>
+
+                        <div class="features-compact">
+                            <span>✓ Adaptive Sportsitze</span>
+                            <span>✓ BOSE® Sound</span>
+                            <span>✓ Bi-Color Leder</span>
+                        </div>
+
+                        <button class="fleet-btn">Details & Buchen</button>
                     </div>
+                </div>
+            </div>
 
-                    <button class="cta-button">Jetzt buchen</button>
+            <!-- Audi A7 -->
+            <div class="fleet-car">
+                <div class="fleet-car-content">
+                    <div class="fleet-car-image">
+                        <img src="/audia7.jpeg" alt="Audi A7 mieten Frankfurt" style="opacity: 0.7;">
+                        <div class="price-badge">
+                            <span class="price-label">Ab</span>
+                            <span class="price-amount">€399</span>
+                            <span class="price-period">/Tag</span>
+                        </div>
+                        <div class="coming-soon-badge">Bald verfügbar</div>
+                    </div>
+                    <div class="fleet-car-details">
+                        <span class="car-badge">Sportback</span>
+                        <h3>Audi A7 Sportback</h3>
+                        <p class="car-tagline">Progressive Eleganz mit innovativer Technologie</p>
+
+                        <div class="car-specs">
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>340 PS</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>0-100 in 5.3s</span>
+                            </div>
+                            <div class="spec-item">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="#1A1A1A" stroke-width="2"/>
+                                </svg>
+                                <span>5 Sitze</span>
+                            </div>
+                        </div>
+
+                        <div class="features-compact">
+                            <span>✓ Matrix LED</span>
+                            <span>✓ Virtual Cockpit</span>
+                            <span>✓ Quattro Allrad</span>
+                        </div>
+
+                        <button class="fleet-btn" disabled>Benachrichtigen</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Car - Porsche Cayenne Coupé -->
-    <section class="featured-car">
+    <!-- Frankfurt Routes Section -->
+    <section class="routes-section" id="strecken">
         <div class="container">
-            <div class="featured-car-content">
-                <div class="featured-car-image">
-                    <img src="/porsche-cayenne/1.jpeg" alt="Porsche Cayenne Coupé">
-                    <div class="price-badge">
-                        <span class="price-label">Ab</span>
-                        <span class="price-amount">€449</span>
-                        <span class="price-period">/Tag</span>
+            <h2 class="section-title">Perfekt für Langstrecken ab Frankfurt</h2>
+            <p class="section-subtitle">Komfortabel und stilvoll zu den wichtigsten Städten Deutschlands</p>
+
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
+                    <h3>Frankfurt → Berlin</h3>
+                    <div class="route-details">
+                        <div class="route-stat">
+                            <span class="stat-label">Distanz:</span>
+                            <span class="stat-value">550 km</span>
+                        </div>
+                        <div class="route-stat">
+                            <span class="stat-label">Fahrzeit:</span>
+                            <span class="stat-value">ca. 5 Std.</span>
+                        </div>
+                        <div class="route-stat">
+                            <span class="stat-label">Empfehlung:</span>
+                            <span class="stat-value">Porsche Panamera</span>
+                        </div>
+                    </div>
+                    <p class="route-description">Genießen Sie die Fahrt in die Hauptstadt in höchstem Komfort. Perfekt für Business-Termine oder Städtetrips.</p>
+                    <button class="route-btn">Für Berlin buchen</button>
                 </div>
-                <div class="featured-car-details">
-                    <span class="car-badge">Verfügbar jetzt</span>
-                    <h2>Porsche Cayenne Coupé</h2>
-                    <p class="car-tagline">Sportliche Eleganz trifft auf SUV-Komfort</p>
 
-                    <div class="car-specs">
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>353 PS</span>
+                <div class="route-card featured">
+                    <div class="popular-tag">Beliebt</div>
+                    <div class="route-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#1A1A1A" stroke-width="2"/>
+                            <circle cx="12" cy="10" r="3" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Frankfurt → Stuttgart</h3>
+                    <div class="route-details">
+                        <div class="route-stat">
+                            <span class="stat-label">Distanz:</span>
+                            <span class="stat-value">210 km</span>
                         </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
-                                <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <span>0-100 in 5.9s</span>
+                        <div class="route-stat">
+                            <span class="stat-label">Fahrzeit:</span>
+                            <span class="stat-value">ca. 2 Std.</span>
                         </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>5 Passagiere</span>
-                        </div>
-                        <div class="spec-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="8" width="18" height="12" rx="2" stroke="#1A1A1A" stroke-width="2"/>
-                                <path d="M7 8V6C7 4.89543 7.89543 4 9 4H15C16.1046 4 17 4.89543 17 6V8" stroke="#1A1A1A" stroke-width="2"/>
-                            </svg>
-                            <span>8-Gang Automatik</span>
+                        <div class="route-stat">
+                            <span class="stat-label">Empfehlung:</span>
+                            <span class="stat-value">Porsche Cayenne</span>
                         </div>
                     </div>
+                    <p class="route-description">Die ideale Strecke für einen Tagesausflug. Besuchen Sie Porsche & Mercedes im Schwabenland.</p>
+                    <button class="route-btn primary">Für Stuttgart buchen</button>
+                </div>
 
-                    <div class="features-list">
-                        <div class="feature-tag">✓ HD-Matrix LED Scheinwerfer</div>
-                        <div class="feature-tag">✓ Adaptive Sportsitze</div>
-                        <div class="feature-tag">✓ BOSE® Surround Sound</div>
-                        <div class="feature-tag">✓ Bi-Color Leder Interieur</div>
-                        <div class="feature-tag">✓ Hinterachslenkung</div>
-                        <div class="feature-tag">✓ SportDesign Paket</div>
+                <div class="route-card">
+                    <div class="route-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#1A1A1A" stroke-width="2"/>
+                            <path d="M9 22V12H15V22" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
                     </div>
+                    <h3>Frankfurt → Hamburg</h3>
+                    <div class="route-details">
+                        <div class="route-stat">
+                            <span class="stat-label">Distanz:</span>
+                            <span class="stat-value">500 km</span>
+                        </div>
+                        <div class="route-stat">
+                            <span class="stat-label">Fahrzeit:</span>
+                            <span class="stat-value">ca. 4.5 Std.</span>
+                        </div>
+                        <div class="route-stat">
+                            <span class="stat-label">Empfehlung:</span>
+                            <span class="stat-value">Audi A7</span>
+                        </div>
+                    </div>
+                    <p class="route-description">Entspannt in die Hansestadt. Ideal für Geschäftsreisen oder maritime Ausflüge.</p>
+                    <button class="route-btn">Für Hamburg buchen</button>
+                </div>
+            </div>
 
-                    <button class="cta-button">Jetzt buchen</button>
+            <div class="route-benefits">
+                <h3>Ihre Vorteile bei Langstreckenfahrten</h3>
+                <div class="benefits-row">
+                    <div class="benefit-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Faire Kilometerpreise</h4>
+                            <p>Transparente Abrechnung ohne Überraschungen</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 11L12 14L22 4" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <h4>Premium-Versicherung</h4>
+                            <p>Vollkasko ohne Selbstbeteiligung</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <h4>24/7 Support</h4>
+                            <p>Persönlicher Ansprechpartner</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -420,16 +620,772 @@
                     </div>
                     <ul class="pricing-features">
                         <li>✓ Professioneller Fahrer</li>
-                        <li>✓ Unbegrenzte KM</li>
+                        <li>✓ Persönlicher Service</li>
                         <li>✓ Vollkaskoversicherung</li>
-                        <li>✓ VIP Service</li>
-                        <li>✓ Champagner</li>
+                        <li>✓ VIP Betreuung</li>
+                        <li>✓ Premium Ausstattung</li>
                     </ul>
                     <button class="pricing-btn">Anfragen</button>
                 </div>
             </div>
 
             <p class="pricing-note">* Alle Preise verstehen sich inklusive MwSt. Zusätzliche Kilometer: €1,50/km</p>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="standort">
+        <div class="container">
+            <h2 class="section-title">Finden Sie uns in Frankfurt</h2>
+            <p class="section-subtitle">Zentral gelegen für schnellen Zugang zu allen Autobahnen</p>
+
+            <div class="map-content">
+                <div class="map-info">
+                    <div class="info-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#1A1A1A" stroke-width="2"/>
+                            <circle cx="12" cy="10" r="3" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Standort Frankfurt</h4>
+                            <p>Frankfurt am Main, Hessen<br>60311 Deutschland</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <div>
+                            <h4>Öffnungszeiten</h4>
+                            <p>Mo-Fr: 08:00 - 20:00<br>Sa-So: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#1A1A1A" stroke-width="2"/>
+                            <path d="M9 22V12H15V22" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Autobahn-Anbindung</h4>
+                            <p>A3, A5, A66 in 5 Min.<br>Direkter Zugang zu allen Routen</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="11" width="18" height="11" rx="2" stroke="#1A1A1A" stroke-width="2"/>
+                            <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="#1A1A1A" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Sicherer Standort</h4>
+                            <p>Bewachtes Gelände<br>Videoüberwachung 24/7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41185.44405086253!2d8.650344299999999!3d50.110924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1234567890123!5m2!1sde!2sde"
+                        width="100%"
+                        height="450"
+                        style="border:0; border-radius: 12px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Price Calculator Section -->
+    <section class="calculator-section" id="preiskalkulator">
+        <div class="container">
+            <div class="calculator-header">
+                <h2 class="section-title">Ihr persönlicher Mietpreis-Kalkulator</h2>
+                <p class="section-subtitle">Wählen Sie Ihr Wunschfahrzeug, Mietdauer und Kilometer – Preis sofort berechnen</p>
+            </div>
+
+            <div class="calculator-container">
+                <div class="calculator-steps">
+                    <div class="step-indicator">
+                        <div class="step active" data-step="1">
+                            <div class="step-number">1</div>
+                            <span>Fahrzeug</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="2">
+                            <div class="step-number">2</div>
+                            <span>Mietdauer</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="3">
+                            <div class="step-number">3</div>
+                            <span>Kilometer</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step" data-step="4">
+                            <div class="step-number">4</div>
+                            <span>Preis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-content">
+                    <!-- Step 1: Vehicle Selection -->
+                    <div class="calculator-step-content active" data-step-content="1">
+                        <h3>Wählen Sie Ihr Traumfahrzeug</h3>
+                        <div class="vehicle-selection-grid">
+                            <div class="vehicle-card disabled" data-vehicle="audi-a7" data-price="200">
+                                <div class="vehicle-card-image">
+                                    <img src="/audia7.jpeg" alt="Audi A7 Sportback mieten Frankfurt" style="opacity: 0.5;">
+                                    <div class="vehicle-badge booked">Gebucht</div>
+                                </div>
+                                <div class="vehicle-card-info">
+                                    <h4>Audi A7 Sportback</h4>
+                                    <div class="vehicle-specs-mini">
+                                        <span>340 PS</span>
+                                        <span>•</span>
+                                        <span>5 Sitze</span>
+                                        <span>•</span>
+                                        <span>Quattro</span>
+                                    </div>
+                                    <p class="vehicle-ideal" style="color: #6b7280;">Aktuell nicht verfügbar</p>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-card featured" data-vehicle="cayenne" data-price="300">
+                                <div class="popular-ribbon">Beliebt</div>
+                                <div class="vehicle-card-image">
+                                    <img src="/porsche-cayenne/1.jpeg" alt="Porsche Cayenne Coupé mieten Frankfurt">
+                                    <div class="vehicle-badge">Ab €300/Tag</div>
+                                </div>
+                                <div class="vehicle-card-info">
+                                    <h4>Porsche Cayenne Coupé</h4>
+                                    <div class="vehicle-specs-mini">
+                                        <span>353 PS</span>
+                                        <span>•</span>
+                                        <span>5 Sitze</span>
+                                        <span>•</span>
+                                        <span>SUV</span>
+                                    </div>
+                                    <p class="vehicle-ideal">Ideal für: Langstrecken & Familie</p>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-card premium" data-vehicle="panamera" data-price="400">
+                                <div class="premium-ribbon">Premium</div>
+                                <div class="vehicle-card-image">
+                                    <img src="/pokda.png" alt="Porsche Panamera mieten Frankfurt">
+                                    <div class="vehicle-badge">Ab €400/Tag</div>
+                                </div>
+                                <div class="vehicle-card-info">
+                                    <h4>Porsche Panamera</h4>
+                                    <div class="vehicle-specs-mini">
+                                        <span>460 PS</span>
+                                        <span>•</span>
+                                        <span>4 Sitze</span>
+                                        <span>•</span>
+                                        <span>Luxus</span>
+                                    </div>
+                                    <p class="vehicle-ideal">Ideal für: VIP & Hochzeiten</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Rental Duration -->
+                    <div class="calculator-step-content" data-step-content="2">
+                        <h3>Wie lange möchten Sie mieten?</h3>
+                        <div class="duration-selector">
+                            <div class="duration-input-group">
+                                <label for="rental-days">Anzahl der Tage</label>
+                                <div class="number-input-wrapper">
+                                    <button class="number-btn" id="days-minus">-</button>
+                                    <input type="number" id="rental-days" value="1" min="1" max="90">
+                                    <button class="number-btn" id="days-plus">+</button>
+                                </div>
+                            </div>
+
+                            <div class="duration-presets">
+                                <button class="duration-preset" data-days="1">1 Tag</button>
+                                <button class="duration-preset" data-days="3">3 Tage<span class="discount-hint">-10%</span></button>
+                                <button class="duration-preset" data-days="7">1 Woche<span class="discount-hint">-15%</span></button>
+                                <button class="duration-preset" data-days="14">2 Wochen<span class="discount-hint">-20%</span></button>
+                                <button class="duration-preset" data-days="30">1 Monat<span class="discount-hint">-25%</span></button>
+                            </div>
+
+                            <div class="discount-info">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2"/>
+                                </svg>
+                                <div>
+                                    <strong>Rabattstaffel:</strong> Ab 3 Tagen 10% • Ab 7 Tagen 15% • Ab 14 Tagen 20% • Ab 30 Tagen 25%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Kilometers -->
+                    <div class="calculator-step-content" data-step-content="3">
+                        <h3>Wie viele Kilometer planen Sie zu fahren?</h3>
+                        <div class="kilometers-selector">
+                            <div class="km-info-box">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                                    <path d="M12 16V12M12 8H12.01" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <p><strong>300 km pro Tag inklusive</strong><br>Jeder weitere Kilometer nur €0,80</p>
+                            </div>
+
+                            <div class="km-input-group">
+                                <label for="total-km">Geschätzte Gesamtstrecke (km)</label>
+                                <div class="number-input-wrapper large">
+                                    <button class="number-btn" id="km-minus">-</button>
+                                    <input type="number" id="total-km" value="300" min="0" max="10000" step="50">
+                                    <button class="number-btn" id="km-plus">+</button>
+                                </div>
+                            </div>
+
+                            <div class="route-presets">
+                                <h4>Beliebte Strecken ab Frankfurt:</h4>
+                                <div class="route-preset-grid">
+                                    <button class="route-preset-btn" data-km="420">
+                                        <span class="route-name">Frankfurt → Stuttgart → Frankfurt</span>
+                                        <span class="route-km">420 km</span>
+                                    </button>
+                                    <button class="route-preset-btn" data-km="1000">
+                                        <span class="route-name">Frankfurt → Hamburg → Frankfurt</span>
+                                        <span class="route-km">1000 km</span>
+                                    </button>
+                                    <button class="route-preset-btn" data-km="1100">
+                                        <span class="route-name">Frankfurt → Berlin → Frankfurt</span>
+                                        <span class="route-km">1100 km</span>
+                                    </button>
+                                    <button class="route-preset-btn" data-km="1500">
+                                        <span class="route-name">Frankfurt → München → Zürich</span>
+                                        <span class="route-km">1500 km</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Price Summary -->
+                    <div class="calculator-step-content" data-step-content="4">
+                        <h3>Ihre persönliche Preisübersicht</h3>
+                        <div class="price-summary-container">
+                            <div class="selected-vehicle-display">
+                                <img id="summary-vehicle-image" src="/pokda.png" alt="">
+                                <div class="summary-vehicle-info">
+                                    <h4 id="summary-vehicle-name">Fahrzeug wählen</h4>
+                                    <p id="summary-vehicle-specs"></p>
+                                </div>
+                            </div>
+
+                            <div class="price-breakdown">
+                                <div class="breakdown-row">
+                                    <span class="breakdown-label">Fahrzeugmiete</span>
+                                    <div class="breakdown-detail">
+                                        <span id="rental-base-calculation" class="detail-calc"></span>
+                                        <span id="rental-base-price" class="breakdown-value">€0</span>
+                                    </div>
+                                </div>
+
+                                <div class="breakdown-row discount-row" id="discount-row" style="display: none;">
+                                    <span class="breakdown-label">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#22C55E" stroke-width="2"/>
+                                        </svg>
+                                        Mengenrabatt (<span id="discount-percentage">0</span>%)
+                                    </span>
+                                    <span id="discount-amount" class="breakdown-value discount">-€0</span>
+                                </div>
+
+                                <div class="breakdown-row">
+                                    <span class="breakdown-label">Kilometer-Paket</span>
+                                    <div class="breakdown-detail">
+                                        <span id="km-base-calculation" class="detail-calc"></span>
+                                        <span class="breakdown-value free">Inklusive</span>
+                                    </div>
+                                </div>
+
+                                <div class="breakdown-row" id="extra-km-row" style="display: none;">
+                                    <span class="breakdown-label">Zusätzliche Kilometer</span>
+                                    <div class="breakdown-detail">
+                                        <span id="extra-km-calculation" class="detail-calc"></span>
+                                        <span id="extra-km-price" class="breakdown-value">€0</span>
+                                    </div>
+                                </div>
+
+                                <div class="breakdown-row insurance-row">
+                                    <span class="breakdown-label">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 11L12 14L22 4" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        Vollkasko-Versicherung
+                                    </span>
+                                    <span class="breakdown-value free">Inklusive</span>
+                                </div>
+
+                                <div class="breakdown-divider"></div>
+
+                                <div class="breakdown-row total-row">
+                                    <span class="breakdown-label">Gesamtpreis</span>
+                                    <span id="total-price" class="breakdown-value total">€0</span>
+                                </div>
+
+                                <div class="price-per-day-info">
+                                    Durchschnitt: <strong id="price-per-day">€0</strong> pro Tag
+                                </div>
+                            </div>
+
+                            <div class="calculator-cta">
+                                <button class="calculator-submit-btn" id="calculator-submit">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    Jetzt anfragen
+                                </button>
+                                <p class="cta-subtext">Unverbindliches Angebot in 5 Minuten • Sofortige Bestätigung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-navigation">
+                    <button class="calc-nav-btn" id="calc-prev" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Zurück
+                    </button>
+                    <button class="calc-nav-btn primary" id="calc-next">
+                        Weiter
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="calculator-features">
+                <div class="calculator-feature">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 11L12 14L22 4" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h4>Transparente Preise</h4>
+                    <p>Keine versteckten Kosten – was Sie sehen, ist was Sie zahlen</p>
+                </div>
+                <div class="calculator-feature">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#1A1A1A" stroke-width="2"/>
+                    </svg>
+                    <h4>Automatische Rabatte</h4>
+                    <p>Je länger Sie mieten, desto mehr sparen Sie – bis zu 25% Rabatt</p>
+                </div>
+                <div class="calculator-feature">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="2"/>
+                        <path d="M12 6V12L16 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h4>Sofortige Berechnung</h4>
+                    <p>Ihr persönlicher Preis in Echtzeit – ohne Wartezeit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Häufig gestellte Fragen</h2>
+            <p class="section-subtitle">Alles was Sie über unsere Luxusauto-Vermietung wissen müssen</p>
+
+            <div class="faq-grid">
+                <div class="faq-category">
+                    <h3>Buchung & Preise</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Wie kann ich ein Fahrzeug buchen?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sie können direkt über unsere Website buchen, indem Sie Ihre Wunschdaten eingeben und das gewünschte Fahrzeug auswählen. Alternativ erreichen Sie uns telefonisch unter +49 123 456 789 oder per E-Mail an info@aventique.com.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Welche Zahlungsmethoden akzeptieren Sie?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Wir akzeptieren alle gängigen Kreditkarten (Visa, Mastercard, American Express), EC-Karten sowie Banküberweisungen. Eine Anzahlung in Höhe von 30% ist bei Buchung fällig.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Wie werden die Kilometer abgerechnet?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Die Kilometerabrechnung erfolgt individuell je nach Mietdauer und Fahrzeug. Kontaktieren Sie uns für ein maßgeschneidertes Angebot, das zu Ihrer geplanten Strecke passt.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Gibt es Rabatte für längere Mietzeiten?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja! Ab 3 Tagen erhalten Sie 10% Rabatt, ab 7 Tagen 15% und ab 14 Tagen 20% Rabatt auf den Tagespreis. Kontaktieren Sie uns für individuelle Langzeitangebote.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Versicherung & Sicherheit</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ist eine Vollkaskoversicherung enthalten?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja, alle unsere Fahrzeuge sind vollkaskoversichert ohne Selbstbeteiligung. Sie fahren sorgenfrei und müssen sich um nichts kümmern.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Welche Voraussetzungen muss ich erfüllen?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sie müssen mindestens 21 Jahre alt sein und seit mindestens 3 Jahren einen gültigen Führerschein besitzen. Ein gültiger Personalausweis oder Reisepass ist erforderlich.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Was passiert bei einem Unfall oder Schaden?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Dank unserer Vollkasko ohne Selbstbeteiligung sind Sie abgesichert. Kontaktieren Sie umgehend unsere 24/7-Hotline. Wir kümmern uns um alles Weitere und stellen Ihnen bei Bedarf ein Ersatzfahrzeug zur Verfügung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Fahrzeuge & Service</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Kann ich das Fahrzeug an einem anderen Ort zurückgeben?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja, One-Way-Mieten sind möglich. Für Rückgaben in Berlin, Stuttgart oder Hamburg berechnen wir eine Pauschale von €250-€500 je nach Entfernung.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Ist ein Chauffeur-Service verfügbar?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Selbstverständlich! Unser professioneller Chauffeur-Service steht für alle Fahrzeuge zur Verfügung. Preise ab €1.699/Tag inklusive VIP-Service und persönlicher Betreuung.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Kann ich das Fahrzeug vor der Buchung besichtigen?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja, Sie können gerne einen Termin für eine Besichtigung vereinbaren. Kontaktieren Sie uns telefonisch oder per E-Mail, um einen passenden Zeitpunkt zu finden.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Sind die Fahrzeuge für Fahrten ins Ausland zugelassen?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja, Fahrten innerhalb der EU sind erlaubt und versichert. Bitte informieren Sie uns bei der Buchung über geplante Auslandsfahrten, damit wir alle notwendigen Dokumente vorbereiten können.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Stornierung & Änderungen</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Welche Stornierungsbedingungen gelten?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Kostenlose Stornierung bis 7 Tage vor Mietbeginn. Bei Stornierung 3-7 Tage vorher berechnen wir 50% der Miete, bei weniger als 3 Tagen 100%.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Kann ich meine Buchung ändern?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Ja, Änderungen sind bis 48 Stunden vor Mietbeginn kostenlos möglich, sofern das gewünschte Fahrzeug verfügbar ist. Kontaktieren Sie uns einfach.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Was passiert bei verspäteter Rückgabe?</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 9L12 15L18 9" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Bei Verspätungen bis zu 2 Stunden ist keine Gebühr fällig. Darüber hinaus berechnen wir €100 pro angefangener Stunde. Bitte informieren Sie uns rechtzeitig, wenn sich Ihre Rückgabe verzögert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <h3>Haben Sie noch weitere Fragen?</h3>
+                <p>Unser Team steht Ihnen gerne zur Verfügung</p>
+                <div class="faq-contact-buttons">
+                    <a href="tel:+49123456789" class="faq-contact-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92V19.92C22 20.4 21.6 20.82 21.12 20.84C20.57 20.87 20.11 20.89 19.75 20.89C10.94 20.89 3.81 13.76 3.81 4.95C3.81 4.59 3.82 4.13 3.86 3.58C3.88 3.1 4.3 2.7 4.8 2.7H7.8C8.19 2.7 8.52 3.01 8.56 3.39C8.6 3.77 8.73 4.15 8.95 4.51C9.18 4.87 9.12 5.35 8.82 5.64L7.35 7.11C8.55 9.38 10.42 11.25 12.69 12.45L14.16 10.98C14.45 10.68 14.93 10.62 15.29 10.85C15.65 11.07 16.03 11.2 16.41 11.24C16.79 11.28 17.1 11.61 17.1 12V15C17.1 15.28 17.01 15.55 16.84 15.77C16.67 15.99 16.44 16.14 16.18 16.18L16.17 16.18C15.88 16.23 15.58 16.25 15.28 16.25C13.53 16.25 11.87 15.76 10.45 14.9" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        +49 123 456 789
+                    </a>
+                    <a href="mailto:info@aventique.com" class="faq-contact-btn secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        info@aventique.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="kontakt">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="contact-form-content">
+                    <div class="contact-form-header">
+                        <h2 class="section-title">Unverbindliche Anfrage stellen</h2>
+                        <p class="section-subtitle">Kostenlos & ohne Verpflichtung – wir melden uns innerhalb von 24 Stunden</p>
+                    </div>
+
+                    <form class="quick-contact-form" id="quick-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#6B7280" stroke-width="2"/>
+                                        <circle cx="12" cy="7" r="4" stroke="#6B7280" stroke-width="2"/>
+                                    </svg>
+                                    Ihr Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="contact-name"
+                                    name="name"
+                                    placeholder="Max Mustermann"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#6B7280" stroke-width="2"/>
+                                        <path d="M3 7L12 13L21 7" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                    E-Mail Adresse *
+                                </label>
+                                <input
+                                    type="email"
+                                    id="contact-email"
+                                    name="email"
+                                    placeholder="max@beispiel.de"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-phone">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92V19.92C22 20.4 21.6 20.82 21.12 20.84C20.57 20.87 20.11 20.89 19.75 20.89C10.94 20.89 3.81 13.76 3.81 4.95C3.81 4.59 3.82 4.13 3.86 3.58C3.88 3.1 4.3 2.7 4.8 2.7H7.8C8.19 2.7 8.52 3.01 8.56 3.39C8.6 3.77 8.73 4.15 8.95 4.51C9.18 4.87 9.12 5.35 8.82 5.64L7.35 7.11C8.55 9.38 10.42 11.25 12.69 12.45L14.16 10.98C14.45 10.68 14.93 10.62 15.29 10.85C15.65 11.07 16.03 11.2 16.41 11.24C16.79 11.28 17.1 11.61 17.1 12V15C17.1 15.28 17.01 15.55 16.84 15.77C16.67 15.99 16.44 16.14 16.18 16.18L16.17 16.18C15.88 16.23 15.58 16.25 15.28 16.25C13.53 16.25 11.87 15.76 10.45 14.9" stroke="#6B7280" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Telefonnummer *
+                            </label>
+                            <input
+                                type="tel"
+                                id="contact-phone"
+                                name="phone"
+                                placeholder="+49 123 456789"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-vehicle">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 17H4C3.46957 17 2.96086 16.7893 2.58579 16.4142C2.21071 16.0391 2 15.5304 2 15V8C2 7.46957 2.21071 6.96086 2.58579 6.58579C2.96086 6.21071 3.46957 6 4 6H20C20.5304 6 21.0391 6.21071 21.4142 6.58579C21.7893 6.96086 22 7.46957 22 8V15C22 15.5304 21.7893 16.0391 21.4142 16.4142C21.0391 16.7893 20.5304 17 20 17H19" stroke="#6B7280" stroke-width="2"/>
+                                    <circle cx="7" cy="17" r="2" stroke="#6B7280" stroke-width="2"/>
+                                    <circle cx="17" cy="17" r="2" stroke="#6B7280" stroke-width="2"/>
+                                </svg>
+                                Gewünschtes Fahrzeug (optional)
+                            </label>
+                            <select id="contact-vehicle" name="vehicle">
+                                <option value="">Bitte wählen</option>
+                                <option value="Porsche Panamera">Porsche Panamera</option>
+                                <option value="Porsche Cayenne Coupé">Porsche Cayenne Coupé</option>
+                                <option value="Audi A7 Sportback" disabled>Audi A7 Sportback (Gebucht)</option>
+                                <option value="Noch unsicher">Noch unsicher – Beratung gewünscht</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Ihre Nachricht (optional)
+                            </label>
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                rows="4"
+                                placeholder="Teilen Sie uns Ihre Wünsche mit: Mietdauer, geplante Route, besondere Anforderungen..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-privacy">
+                            <label class="privacy-checkbox">
+                                <input type="checkbox" id="contact-privacy" required>
+                                <span class="checkmark"></span>
+                                <span class="privacy-text">
+                                    Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> zur Kenntnis genommen. Ich stimme zu, dass meine Angaben zur Kontaktaufnahme und für Rückfragen gespeichert werden.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Unverbindlich anfragen
+                        </button>
+
+                        <p class="form-note">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#22C55E" stroke-width="2"/>
+                                <path d="M9 11L12 14L22 4" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            100% kostenlos & unverbindlich • Keine Verpflichtung • Antwort innerhalb 24h
+                        </p>
+                    </form>
+                </div>
+
+                <div class="contact-form-benefits">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#22C55E" stroke-width="2"/>
+                                <path d="M12 6V12L16 14" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h4>Schnelle Antwort</h4>
+                        <p>Antwort innerhalb von 24 Stunden an Werktagen</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="11" width="18" height="11" rx="2" stroke="#22C55E" stroke-width="2"/>
+                                <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="#22C55E" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4>Datenschutz</h4>
+                        <p>Ihre Daten werden vertraulich behandelt und nicht weitergegeben</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="#22C55E" stroke-width="2"/>
+                                <circle cx="9" cy="7" r="4" stroke="#22C55E" stroke-width="2"/>
+                                <path d="M23 21V19C23 18.1312 22.7224 17.3045 22.2168 16.6422" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="#22C55E" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h4>Persönliche Beratung</h4>
+                        <p>Individuelle Empfehlung für Ihr perfektes Fahrzeug</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#22C55E" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h4>Beste Konditionen</h4>
+                        <p>Exklusive Angebote und Sonderkonditionen für Anfragen</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -441,17 +1397,28 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="#hero">Home</a></li>
-                        <li><a href="#fahrzeug">Fahrzeug</a></li>
-                        <li><a href="#vorteile">Warum wir</a></li>
-                        <li><a href="#anlaesse">Anlässe</a></li>
+                        <li><a href="#fahrzeuge">Fahrzeuge</a></li>
+                        <li><a href="#strecken">Strecken</a></li>
+                        <li><a href="#vorteile">Vorteile</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Services</h4>
+                    <h4>Luxusautos</h4>
                     <ul>
-                        <li><a href="#preise">Preise</a></li>
-                        <li><a href="#" id="footer-booking-btn">Buchung</a></li>
-                        <li><a href="#fahrzeug">Porsche Panamera</a></li>
+                        <li><a href="#fahrzeuge">Porsche Panamera</a></li>
+                        <li><a href="#fahrzeuge">Porsche Cayenne Coupé</a></li>
+                        <li><a href="#fahrzeuge">Audi A7 Sportback</a></li>
+                        <li><a href="#preise">Preise & Pakete</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Beliebte Strecken</h4>
+                    <ul>
+                        <li><a href="#strecken">Frankfurt → Berlin</a></li>
+                        <li><a href="#strecken">Frankfurt → Stuttgart</a></li>
+                        <li><a href="#strecken">Frankfurt → Hamburg</a></li>
+                        <li><a href="#standort">Standort Frankfurt</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -464,16 +1431,16 @@
                 <div class="footer-column">
                     <h4>Rechtliches</h4>
                     <ul>
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="#datenschutz">Datenschutz</a></li>
-                        <li><a href="#agb">AGB</a></li>
+                        <li><a href="impressum.html" rel="nofollow">Impressum</a></li>
+                        <li><a href="#datenschutz" rel="nofollow">Datenschutz</a></li>
+                        <li><a href="#agb" rel="nofollow">AGB</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <a href="impressum.html">Impressum</a>
-                    <a href="#datenschutz">Datenschutz</a>
+                    <a href="impressum.html" rel="nofollow">Impressum</a>
+                    <a href="#datenschutz" rel="nofollow">Datenschutz</a>
                     <span>© 2025 Aventique. Alle Rechte vorbehalten</span>
                 </div>
             </div>
