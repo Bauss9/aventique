@@ -8,6 +8,37 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ==========================================
+// DATE INPUT PLACEHOLDER FIX FOR MOBILE
+// ==========================================
+function initDateInputs() {
+    const dateInputs = document.querySelectorAll('input[type="date"]');
+
+    dateInputs.forEach(input => {
+        const placeholder = input.getAttribute('placeholder');
+
+        // Set data attribute for styling
+        input.setAttribute('data-placeholder', placeholder);
+
+        // Add change event to handle value
+        input.addEventListener('change', function() {
+            if (this.value) {
+                this.classList.add('has-value');
+            } else {
+                this.classList.remove('has-value');
+            }
+        });
+
+        // Initial check
+        if (input.value) {
+            input.classList.add('has-value');
+        }
+    });
+}
+
+// Initialize date inputs when DOM is loaded
+document.addEventListener('DOMContentLoaded', initDateInputs);
+
 // Mobile Menu Toggle
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinks = document.querySelector('.nav-links');
